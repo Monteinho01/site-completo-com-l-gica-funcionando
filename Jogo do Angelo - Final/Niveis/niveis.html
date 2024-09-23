@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Níveis do Jogo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="niveis.css">
+</head>
+<body>
+  <div class="background-animation"></div> <!-- Div para o fundo animado -->
+
+  <div class="container fade-in"> <!-- Contêiner principal com efeito de fade-in -->
+    <h1>Tutorial: Arraste e Solte</h1> <!-- Título do tutorial -->
+
+    <!-- Imagens clicáveis -->
+    <div class="image-container">
+      <img id="smallImage1" src="/Imagens/imagem-tutorial-pequena.png" alt="Imagem Pequena 1" class="clickable-image small-image" style="cursor: pointer;">
+      <img id="smallImage2" src="/Imagens/imagem-tutorial-pequena2.png" alt="Imagem Pequena 2" class="clickable-image small-image" style="cursor: pointer;">
+    </div>
+
+    <!-- Área de arrastar e soltar, inicialmente escondida -->
+    <div class="drag-area" style="display: none;">
+      <p>Arraste o bloco certo aqui:</p>
+      <div class="dropzone" id="dropzone"></div> <!-- Área onde os blocos podem ser soltos -->
+    </div>
+
+    <!-- Blocos arrastáveis, inicialmente escondidos -->
+    <div class="blocks" style="display: none;">
+      <div class="block" draggable="true" id="correct-block"></div> <!-- Bloco correto -->
+      <div class="block" draggable="true" id="wrong-block"></div> <!-- Bloco errado -->
+    </div>
+
+    <!-- Sistema de pontuação e feedback -->
+    <div class="score">
+      <p>Pontuação: <span id="score">0</span></p> <!-- Exibe a pontuação atual -->
+      <p id="feedback"></p> <!-- Espaço para feedback ao usuário -->
+    </div>
+
+    <!-- Botão de retorno ao tutorial, inicialmente escondido -->
+    <button id="returnBtn" style="display: none;">Voltar ao Tutorial</button>
+    <!-- Botão para passar de nível, inicialmente desabilitado -->
+    <button id="next-level-btn" disabled>Próximo Nível</button>
+  </div>
+
+  <script src="niveis.js"></script> <!-- Link para o arquivo JavaScript que controla a lógica do jogo -->
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+/* Estilo da animação de fundo */
+.background-animation {
+    position: fixed;  /* O fundo vai ficar fixo em relação à tela */
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Preenche toda a largura da viewport */
+    height: 100vh; /* Preenche toda a altura da viewport */
+    background: linear-gradient(135deg, #4a90e2, #f4f4f9, #ff5f6d); /* Gradiente de fundo com três cores */
+    animation: backgroundMove 5s infinite linear; /* Animação que muda a posição do fundo */
+    z-index: -1;  /* Mantém o fundo atrás de todo o conteúdo */
+}
+
+/* Define os quadros-chave da animação de fundo */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%; /* Posição inicial do fundo */
+    }
+    50% {
+        background-position: 100% 50%; /* Posição no meio da animação */
+    }
+    100% {
+        background-position: 0% 50%; /* Retorna à posição inicial */
+    }
+}
+
+/* Estilo do conteúdo centralizado */
+.content-container {
+    position: relative; /* Permite que a div seja posicionada em relação ao seu contêiner pai */
+    z-index: 1; /* Garante que o conteúdo fique acima do fundo */
+    background-color: white; /* Fundo branco para o conteúdo */
+    padding: 20px; /* Espaçamento interno */
+    margin: 100px auto; /* Margem superior de 100px e centraliza horizontalmente */
+    max-width: 600px; /* Limita a largura máxima do conteúdo */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do conteúdo */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    opacity: 0.95;  /* Leve transparência para o conteúdo */
+}
+
+/* Estilo da imagem explicativa */
+.explanation-image {
+    width: 200px; /* Largura fixa para a imagem */
+    margin: 20px 0; /* Margem acima e abaixo da imagem */
+}
+
+/* Estilo do botão */
+button {
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #4a90e2; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove bordas do botão */
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    margin-top: 20px; /* Margem superior para espaçamento */
+}
+
+button:hover {
+    background-color: #357abD; /* Altera a cor do botão ao passar o mouse */
+}
+
+/* Estilo dos textos */
+#explanationText {
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    margin: 20px 0; /* Margem acima e abaixo do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}

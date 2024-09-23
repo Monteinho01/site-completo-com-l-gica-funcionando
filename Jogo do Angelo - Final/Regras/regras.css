@@ -1,0 +1,82 @@
+/* Estilo geral do corpo da página */
+body {
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto */
+  background: linear-gradient(135deg, #4a90e2, #f4f4f9); /* Fundo com gradiente em 135 graus */
+  animation: gradientAnimation 10s infinite; /* Animação contínua do fundo */
+  color: #333; /* Cor do texto */
+  display: flex; /* Utiliza flexbox para centralizar conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Altura da viewport inteira */
+  margin: 0; /* Remove margens padrão */
+}
+
+/* Definição da animação do gradiente */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; } /* Posição inicial do fundo */
+  50% { background-position: 100% 50%; } /* Posição intermediária */
+  100% { background-position: 0% 50%; } /* Retorna à posição inicial */
+}
+
+/* Estilo do contêiner de menu */
+.menu-container {
+  text-align: center; /* Centraliza o texto dentro do contêiner */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  padding: 50px; /* Espaçamento interno */
+  border-radius: 20px; /* Cantos arredondados */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra ao redor do contêiner */
+  animation: fadeIn 2s ease-out; /* Animação de aparição */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); } /* Começa invisível e levemente menor */
+  to { opacity: 1; transform: scale(1); } /* Termina visível e no tamanho normal */
+}
+
+/* Estilo do título h1 */
+h1 {
+  color: #4a90e2; /* Cor do título */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  font-size: 2.5rem; /* Tamanho da fonte */
+  opacity: 0; /* Inicialmente invisível */
+  animation: fadeInTitle 2s ease-out forwards; /* Animação de aparição do título */
+}
+
+/* Animação de fade-in para o título */
+@keyframes fadeInTitle {
+  0% { opacity: 0; transform: translateY(-50px); } /* Começa invisível e acima */
+  100% { opacity: 1; transform: translateY(0); } /* Termina visível e na posição normal */
+}
+
+/* Estilo do contêiner de botões */
+.buttons {
+  display: flex; /* Utiliza flexbox para disposição dos botões */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo dos botões de menu */
+.menu-button {
+  display: inline-block; /* Permite que o botão tenha propriedades de bloco */
+  background-color: #4a90e2; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 15px 30px; /* Espaçamento interno do botão */
+  font-size: 1.2rem; /* Tamanho da fonte do botão */
+  border-radius: 8px; /* Cantos arredondados do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor do botão */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações e sombras */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.menu-button:hover {
+  transform: translateY(-5px); /* Eleva o botão levemente */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
+
+/* Efeito ao clicar no botão */
+.menu-button:active {
+  transform: translateY(2px); /* Empurra o botão para baixo ao clicar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Diminui a sombra */
+}

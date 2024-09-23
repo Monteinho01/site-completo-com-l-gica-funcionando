@@ -1,0 +1,56 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura dos elementos */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte do corpo */
+    background: linear-gradient(135deg, #4a90e2, #f4f4f9); /* Fundo com um gradiente linear */
+    color: #333; /* Cor do texto */
+    display: flex; /* Flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da janela */
+    text-align: center; /* Centraliza o texto */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    padding: 30px; /* Aumenta o espaço interno do contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    animation: fadeIn 1s forwards; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Termina totalmente visível */
+    }
+}
+
+h1 {
+    color: #4a90e2; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.button {
+    display: inline-block; /* Permite que o botão tenha largura e altura */
+    padding: 12px 25px; /* Aumenta o espaço interno do botão */
+    margin-top: 20px; /* Espaço acima do botão */
+    background-color: #4a90e2; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    text-decoration: none; /* Remove sublinhado do link */
+    border-radius: 8px; /* Bordas arredondadas no botão */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para o botão */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves para cor e transformação */
+}
+
+.button:hover {
+    background-color: #357ab8; /* Cor do botão ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}

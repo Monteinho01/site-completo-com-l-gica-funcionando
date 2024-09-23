@@ -1,0 +1,95 @@
+/* Reset de margens e preenchimentos */
+* {
+  margin: 0; /* Remove margens de todos os elementos */
+  padding: 0; /* Remove preenchimentos de todos os elementos */
+  box-sizing: border-box; /* Inclui padding e bordas nas dimensões dos elementos */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Define a fonte do corpo */
+  background-color: #f4f4f9; /* Cor de fundo do corpo */
+  color: #333; /* Cor do texto */
+  display: flex; /* Flexbox para centralização */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Altura total da tela */
+  overflow: hidden; /* Oculta qualquer conteúdo que exceda a área visível */
+  position: relative; /* Necessário para posicionamento absoluto dos elementos filhos */
+}
+
+/* Fundo decorado */
+.background-animation {
+  position: absolute; /* Permite que o fundo ocupe toda a tela */
+  top: 0; /* Início do fundo no topo */
+  left: 0; /* Início do fundo na esquerda */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  background: linear-gradient(135deg, #4a90e2, #f4f4f9); /* Gradiente de fundo */
+  z-index: -1; /* Coloca o fundo atrás do conteúdo */
+  animation: backgroundMove 10s infinite linear; /* Animação de movimento do fundo */
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%; /* Posição inicial do gradiente */
+  }
+  100% {
+    background-position: 100% 50%; /* Posição final do gradiente */
+  }
+}
+
+.container {
+  text-align: center; /* Centraliza o texto dentro do contêiner */
+  z-index: 2; /* Garante que o contêiner fique acima do fundo */
+  opacity: 0; /* Inicialmente invisível */
+  animation: fadeIn 1s forwards; /* Animação de fade-in para torná-lo visível */
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1; /* Torna visível ao final da animação */
+  }
+}
+
+h1 {
+  color: #fff; /* Cor do título */
+  margin-bottom: 30px; /* Espaçamento abaixo do título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto do título */
+}
+
+/* Imagem grande */
+.large-image {
+  position: relative; /* Define como referência para as imagens pequenas */
+  display: inline-block; /* Permite contorno ao redor da imagem grande */
+}
+
+.large-image img {
+  max-width: 100%; /* Limita a largura da imagem ao tamanho do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra ao redor da imagem */
+  transition: border 0.3s ease; /* Transição suave ao mudar a borda */
+}
+
+/* Contorno ao passar o mouse */
+.large-image img:hover {
+  border: 5px solid rgba(74, 144, 226, 0.8); /* Borda ao passar o mouse */
+}
+
+/* Estilização das imagens pequenas */
+.small-image {
+  position: absolute; /* Permite que as imagens pequenas sejam posicionadas em relação à imagem grande */
+  width: 150px; /* Tamanho padrão da imagem pequena */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
+  transition: box-shadow 0.3s ease; /* Transição suave ao mudar a sombra */
+}
+
+.small-image-small {
+  width: 100px; /* Tamanho menor para a segunda imagem pequena */
+}
+
+.small-image:hover {
+  box-shadow: 0 0 10px 5px rgba(74, 144, 226, 0.8); /* Brilho no contorno ao passar o mouse */
+}

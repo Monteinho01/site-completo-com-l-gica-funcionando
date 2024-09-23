@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos nas dimensões dos elementos */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Define a fonte do corpo */
+  background: linear-gradient(270deg, #4a90e2, #6be585, #f4f4f9); /* Fundo com gradiente */
+  background-size: 600% 600%; /* Tamanho do fundo para animação */
+  animation: gradientAnimation 10s ease infinite; /* Animação de mudança de cor de fundo */
+  display: flex; /* Usado para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Altura total da tela */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; } /* Posição inicial do gradiente */
+  50% { background-position: 100% 50%; } /* Posição intermediária do gradiente */
+  100% { background-position: 0% 50%; } /* Posição final do gradiente */
+}
+
+.menu-container {
+  text-align: center; /* Centraliza o texto dentro do contêiner */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  padding: 50px; /* Espaçamento interno */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra ao redor do contêiner */
+  animation: fadeIn 2s ease-out; /* Animação de aparecimento */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); } /* Começa invisível e levemente menor */
+  to { opacity: 1; transform: scale(1); } /* Termina visível e no tamanho normal */
+}
+
+h1 {
+  color: #4a90e2; /* Cor do título */
+  margin-bottom: 40px; /* Espaçamento abaixo do título */
+  font-size: 2.5rem; /* Tamanho da fonte do título */
+  opacity: 0; /* Começa invisível */
+  animation: fadeInTitle 2s ease-out forwards; /* Animação do título */
+}
+
+@keyframes fadeInTitle {
+  0% { opacity: 0; transform: translateY(-50px); } /* Título começa invisível e acima */
+  100% { opacity: 1; transform: translateY(0); } /* Título termina visível e na posição normal */
+}
+
+.buttons {
+  display: flex; /* Usado para alinhar os botões */
+  justify-content: center; /* Centraliza os botões */
+  gap: 20px; /* Espaçamento entre os botões */
+}
+
+.menu-button {
+  display: inline-block; /* Faz com que o link se comporte como um botão */
+  background-color: #4a90e2; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 15px 30px; /* Espaçamento interno do botão */
+  font-size: 1.2rem; /* Tamanho da fonte do botão */
+  border-radius: 8px; /* Bordas arredondadas do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor do botão */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao interagir */
+}
+
+.menu-button:hover {
+  transform: translateY(-5px); /* Levanta o botão ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+.menu-button:active {
+  transform: translateY(2px); /* Afunda o botão ao clicar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduz a sombra ao clicar */
+}

@@ -1,0 +1,140 @@
+/* Reset de margens e preenchimentos para todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos nas dimensões totais do elemento */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte do corpo da página */
+    background-color: #f4f4f9; /* Cor de fundo do corpo */
+    color: #333; /* Cor do texto */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura da viewport inteira */
+    overflow: hidden; /* Impede rolagem, mantendo o layout fixo */
+    position: relative; /* Necessário para posicionamento absoluto de elementos filhos */
+}
+
+/* Fundo decorado com animação */
+.background-animation {
+    position: absolute; /* Permite que o fundo ocupe todo o espaço */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background: linear-gradient(135deg, #4a90e2, #f4f4f9); /* Gradiente de fundo */
+    z-index: -1; /* Coloca atrás de outros elementos */
+    animation: backgroundMove 10s infinite linear; /* Animação contínua do fundo */
+}
+
+/* Animação do fundo */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%; /* Início da animação */
+    }
+    100% {
+        background-position: 100% 50%; /* Fim da animação */
+    }
+}
+
+/* Contêiner principal do conteúdo */
+.container {
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    z-index: 2; /* Mantém à frente do fundo */
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 1s forwards; /* Animação de fade-in */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Termina visível */
+    }
+}
+
+/* Estilo do título h1 */
+h1 {
+    color: #fff; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra do texto para destaque */
+}
+
+/* Contêiner para imagens pequenas */
+.image-container {
+    display: flex; /* Utiliza flexbox para alinhar imagens */
+    justify-content: center; /* Centraliza as imagens */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo para imagens pequenas */
+.small-image {
+    width: 150px; /* Largura fixa para imagens pequenas */
+}
+
+/* Estilo da área de arrastar e soltar */
+.drag-area {
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo da zona de soltura */
+.dropzone {
+    width: 300px; /* Largura da área de soltar */
+    height: 100px; /* Altura da área de soltar */
+    border: 2px dashed #4a90e2; /* Borda pontilhada */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 10px auto; /* Centraliza horizontalmente */
+}
+
+/* Estilo dos blocos arrastáveis */
+.blocks {
+    display: flex; /* Utiliza flexbox para disposição dos blocos */
+    justify-content: center; /* Centraliza os blocos */
+    gap: 20px; /* Espaçamento entre os blocos */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo individual para cada bloco */
+.block {
+    width: 100px; /* Largura fixa para blocos */
+    height: 100px; /* Altura fixa para blocos */
+    background-color: #4a90e2; /* Cor de fundo do bloco */
+    color: #fff; /* Cor do texto do bloco */
+    display: flex; /* Utiliza flexbox para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border-radius: 10px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+
+/* Estilo da pontuação */
+.score {
+    margin-top: 20px; /* Espaçamento superior */
+    color: #fff; /* Cor da pontuação */
+}
+
+/* Estilo do botão para próximo nível */
+#next-level-btn {
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #4a90e2; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: not-allowed; /* Cursor indica que não pode ser clicado */
+    opacity: 0.7; /* Torna o botão levemente transparente */
+    transition: opacity 0.3s; /* Transição suave para opacidade */
+}
+
+/* Estilo do botão habilitado */
+#next-level-btn.enabled {
+    cursor: pointer; /* Altera o cursor quando habilitado */
+    opacity: 1; /* Torna o botão totalmente visível */
+}
+
+/* Estilo para esconder elementos */
+.hidden {
+    display: none; /* Oculta elementos que possuem esta classe */
+}
+

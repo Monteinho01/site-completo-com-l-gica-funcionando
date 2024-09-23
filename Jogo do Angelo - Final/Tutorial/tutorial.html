@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Tutorial Interativo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tutorial.css"> 
+</head>
+<body>
+  <div class="background-animation"></div> <!-- Fundo decorado com animação -->
+  
+  <div class="container fade-in"> <!-- Adiciona classe para animação de fade-in -->
+    <h1>Tutorial Interativo</h1> <!-- Título do tutorial -->
+
+    <!-- Imagem grande -->
+    <div class="large-image">
+      <img src="/Imagens/imagem-tutorial.jpg" alt="Imagem Grande"> <!-- Imagem grande do tutorial -->
+
+      <!-- Imagens pequenas sobrepondo a imagem grande -->
+      <img id="smallImage1" src="/Imagens/imagem-tutorial-pequena.png" alt="Imagem Pequena 1" class="clickable-image small-image" style="top: 21%; left: 15%;"> <!-- Primeira imagem pequena -->
+      <img id="smallImage2" src="/Imagens/imagem-tutorial-pequena2.png" alt="Imagem Pequena 2" class="clickable-image small-image small-image-small" style="top: 50%; left: 20%;"> <!-- Segunda imagem pequena -->
+    </div>
+  </div>
+
+  <script src="tutorial.js"></script> <!-- Script separado para a lógica do tutorial -->
+</body>
+</html>
